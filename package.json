@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/tomgao1/xiaolunzi-demo/issues"
   },
-  "homepage": "https://github.com/tomgao1/xiaolunzi-demo#readme"
+  "homepage": "https://github.com/tomgao1/xiaolunzi-demo#readme",
+  "dependencies": {
+    "install": "^0.13.0",
+    "vue": "^2.6.11"
+  }
 }
