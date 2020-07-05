@@ -10,8 +10,13 @@
 </template>
 
 <script>
-    export default { 
-     props :{
+
+import Icon from './icon'
+export default { 
+  components: {
+    'g-icon': Icon
+  },
+    props :{
        icon:{},
        loading: {
          type:Boolean,

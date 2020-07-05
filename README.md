@@ -9,3 +9,4 @@
  ```
  *{box-sizing:border-box}
  ```
+ 你需要用 npx parcel index.html --no-cache 来开启项目
