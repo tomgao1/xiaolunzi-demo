@@ -1,12 +1,25 @@
- #小轮子 Vue UI 组件
- 作者：豪子哥
+ # 轱辘 Vue UI 组件
+ [![Build Status](https://travis-ci.org/tomgao1/xiaolunzi-demo.svg?branch=master)](https://travis-ci.org/tomgao1/xiaolunzi-demo)
+ ## 介绍
+ ## 
+
+ ## 开始使用
 
 
- ##安装
+ 1.安装
 
  使用本框架前，请在CSS中开启 border-box
 
  ```
  *{box-sizing:border-box}
  ```
- 你需要用 npx parcel index.html --no-cache 来开启项目
+ 
+   ## 文档
+
+   ## 提问
+
+   ## 变更记录
+
+   ## 联系方式
+
+   ## 贡献代码
