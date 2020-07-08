@@ -7,12 +7,13 @@
 
 <script>
     export default {
-        
+        name:'GuluSider'
     }
 </script>
 
 <style lang="scss" scoped>
   .sider {
+      background: blue;
 
   }
 </style>
