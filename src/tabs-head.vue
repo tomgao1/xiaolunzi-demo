@@ -11,7 +11,7 @@
     name: 'GuluTabsHead',
     inject: ['eventBus'],
     created () {
-        this.$emit('update:selected','tabs-head抛出的数据')
+       
     }
   }
 </script>
