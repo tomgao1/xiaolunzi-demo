@@ -13,7 +13,7 @@ export default {
              message,
              propsData:toastOptions,
              onClose:()=>{
-                 createToast = null
+                 currentToast = null
              }
          })
         }
