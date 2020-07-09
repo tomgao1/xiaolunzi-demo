@@ -12,7 +12,7 @@ import Content from './content'
 import Footer from './footer'
 import Toast from './toast'
 import plugin from './plugin'
-import createElement from 'vue'
+
 import Tabs from './tabs'
 import TabsHead from './tabs-head'
 import TabsBody from './tabs-body'
@@ -41,7 +41,7 @@ Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
 
 
-
+import createElement from 'vue'
 
 
 const h  = createElement
