@@ -36,13 +36,14 @@
                type:Boolean,
                default:false
            },
-           position: {
-               type:String,
-               default:'top',
-               validator(value) {
-                   return ['top','buttom','middle'].indexOf(value) >=0
+               position: {
+               type: String,
+               default: 'top',
+               validator (value) {
+                   return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+               }   
                }
-           }
+           
        },
       
        mounted () {
@@ -50,11 +51,11 @@
            this.execAutoClose()
        },
        computed: {
-           toastClasses () {
-               return {
-                   [`position-${this.position}`] :true
-               }
-           }
+      toastClasses () {
+        return {
+          [`position-${this.position}`]: true
+        }
+      }
        },
        methods: {
            updateStyles() {
