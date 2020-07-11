@@ -68,6 +68,7 @@
          &.disabled {
       color: $disabled-text-color;
        cursor:not-allowed;
+       
     }
     }
 </style>
