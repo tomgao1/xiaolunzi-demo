@@ -2,7 +2,7 @@
     <div class="popover" ref="popover">
         <div class="content-wrapper" v-if="visible" 
         ref="contentWrapper" :class="{[`position-${position}`]:true}">
-            <slot name="content"></slot>
+            <slot name="content" :close="close"></slot>
         </div>
         <span ref="triggerWrapper" style="display:inline-block;">
             <slot></slot>
@@ -13,6 +13,22 @@
 <script>
     export default {
         name:"GuluPopover",
+        props: {
+      position: {
+        type: String,
+        default: 'top',
+        validator (value) {
+          return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
+        }
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator (value) {
+          return ['click', 'hover'].indexOf(value) >= 0
+        }
+      }
+    },
         data () {
             return {visible:false}
         },
@@ -154,10 +170,12 @@
       &::before {
         border-top-color: black;
         top: 100%;
+         border-bottom: none;
       }
       &::after {
         border-top-color: white;
         top: calc(100% - 1px);
+         border-bottom: none;
       }
     }
     &.position-bottom {
@@ -168,10 +186,12 @@
       &::before {
         border-bottom-color: black;
         bottom: 100%;
+         border-bottom: none;
       }
       &::after {
         border-bottom-color: white;
         bottom: calc(100% - 1px);
+         border-bottom: none;
       }
     }
     &.position-left {
@@ -199,10 +219,12 @@
       &::before {
         border-right-color: black;
         right: 100%;
+         border-bottom: none;
       }
       &::after {
         border-right-color: white;
         right: calc(100% - 1px);
+         border-bottom: none;
       }
     }
   }
