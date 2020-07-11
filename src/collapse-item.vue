@@ -24,35 +24,28 @@
             },
             data () {
                 return {
-                    open:false
+                    open:false,
                 }
             },
             inject: ['eventBus'],
-            mounted() {
-                this.eventBus && this.eventBus.$on('update:selected',(name) => {
-                    if (name !==this.name) {
-                        this.close()
+     mounted() {
+                this.eventBus && this.eventBus.$on('update:selected',(names) => {
+                    if (names.indexOf(this.name) >=0) {
+                        this.open = true
                     } else {
-                        this.show()
+                        this.open = false
                     }
                 })
             },
             methods: {
                 toggle () {
                     if(this.open) {
-                        this.open = false 
+                        this.eventBus && this.eventBus.$emit('update:removeSelected',this.name)
                     } else {
-                 this.eventBus && this.eventBus.$emit('update:selected',this.name)
+                 this.eventBus && this.eventBus.$emit('update:addSelected',this.name)
                     }
                 },
-                close() {
-                    this.open = false
-                },
-                show () {
-                     console.log('this.open')
-                    console.log(this.open)
-                    this.open =true
-                }
+               
             }
     }
 </script>
