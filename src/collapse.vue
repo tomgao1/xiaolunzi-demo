@@ -7,7 +7,25 @@
 
 <script>
     export default {
-          name:"GuluCollapse"
+          name:"GuluCollapse",
+          props: {
+              single: {
+                  type:Boolean,
+                  default:false
+              }
+          },
+          date () {
+              return {
+                  eventBus:new Vue()
+              }
+          },
+          provide () {
+              if(this.single) {
+                  return {
+                      eventBus:this.eventBus
+                  }
+              }
+          }
     }
 </script>
 
