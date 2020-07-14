@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="gulu-content">
         <slot></slot>
 
     </div>
@@ -7,12 +7,12 @@
 
 <script>
     export default {
-        
+        name: 'GuluContent'
     }
 </script>
 
 <style lang="scss" scoped>
-   .footer{
-       
-   }
+ .content{
+     flex-grow: 1;
+ }
 </style>
