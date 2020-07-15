@@ -27,6 +27,7 @@
  import TabsPane from '../../../src/tabs-pane'
  import TabsBody from '../../../src/tabs-body'
     export default {
+       
          components: {
       'g-tabs': Tabs,
       'g-tabs-item':TabsItem,
@@ -34,8 +35,11 @@
       'g-tabs-head':TabsHead,
       'g-tabs-pane':TabsPane
     },
+   
+    
     data () {
       return {
+      
         selected: '1',
         content: `
           data:{
