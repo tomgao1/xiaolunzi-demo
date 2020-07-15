@@ -1,12 +1,10 @@
 <template>
-    <div class="tabs">
-        <slot></slot>
-
-    </div>
+  <div class="tabs">
+    <slot></slot>
+  </div>
 </template>
-
 <script>
-   import Vue from 'vue'
+  import Vue from 'vue'
   export default {
     name: 'GuluTabs',
     props: {
@@ -58,9 +56,7 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
-   .tabs {
-
-   }
+<style>
+  .tabs {
+  }
 </style>
