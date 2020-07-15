@@ -1,5 +1,5 @@
 <template>
- <div class="wrapper" :class="toastClasses">
+  <div class="gulu-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
@@ -14,42 +14,41 @@
 </template>
 
 <script>
-    export default {
-        name: 'GuluToast', 
-        props: {
-           autoClose: {
-               type:[Boolean,Number],
-               default:5,
-               validator (value) {
-                   return value ===false ||typeof value ==='number';
-               }
-           },
-           closeButton: {
-               type:Object,
-               default () {
-                   return {
-                       text: '关闭',callback:undefined
-                   }
-               }
-           },
-           enableHtml: {
-               type:Boolean,
-               default:false
-           },
-               position: {
-               type: String,
-               default: 'top',
-               validator (value) {
-                   return ['top', 'bottom', 'middle'].indexOf(value) >= 0
-               }   
-               }
-           
-       },
-      
-       mounted () {
-           this.updateStyles()
-           this.execAutoClose()
-       },
+
+     export default {
+    name: 'GuluToast',
+    props: {
+      autoClose: {
+        type: [Boolean, Number],
+        default: 5,
+        validator (value) {
+          return value === false || typeof value === 'number';
+        }
+      },
+      closeButton: {
+        type: Object,
+        default () {
+          return {
+            text: '关闭', callback: undefined
+          }
+        }
+      },
+      enableHtml: {
+        type: Boolean,
+        default: false
+      },
+     position: {
+        type: String,
+        default: 'top',
+        validator (value) {
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+        }
+      }
+    },
+    mounted () {
+      this.updateStyles()
+      this.execAutoClose()
+    },
        computed: {
       toastClasses () {
         return {
@@ -104,7 +103,7 @@
     0% {opacity: 0; }
     100% {opacity: 1;}
   }
-  .wrapper {
+  .gulu-toast {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
