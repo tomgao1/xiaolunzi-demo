@@ -1,5 +1,5 @@
 module.exports = {
-  base:'/xiaolunzi-demo',
+  base:'/xiaolunzi-demo/',
     title: '小轮子UI',
     description: '一个好用的UI框架',
     themeConfig: {
