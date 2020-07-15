@@ -1,7 +1,7 @@
 <template>
   <div>
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">默认按钮</g-button>
+    <g-button>按钮1</g-button>
+    <g-button icon="settings">按钮2</g-button>
     <g-button :loading="true">默认按钮</g-button>
     <g-button disabled>默认按钮</g-button>
 
@@ -19,8 +19,8 @@
     data () {
       return {
         content: `
-        <g-button>默认按钮</g-button>
-        <g-button icon="settings">默认按钮</g-button>
+        <g-button>按钮1</g-button>
+        <g-button icon="settings">按钮2</g-button>
         <g-button :loading="true">默认按钮</g-button>
         <g-button disabled>默认按钮</g-button>
       `.replace(/\t+| +/g, '').trim()
