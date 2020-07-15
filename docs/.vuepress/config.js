@@ -1,6 +1,6 @@
 module.exports = {
   base:'/xiaolunzi-demo',
-    title: '轱辘UI',
+    title: '小轮子UI',
     description: '一个好用的UI框架',
     themeConfig: {
       nav: [
